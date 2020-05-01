@@ -1,17 +1,48 @@
+@import 'config';
 body, html {
   margin:0;
   padding:0;
 }
 
 body { 
-  display: grid;
-  place-content: center;
+  // display: grid;
+  // place-content: center;
+  font-family: $font-stack;
   height: 100vh;
+  justify-content: space-evenly;
   background-color: rgb(238,238,238);
 }
-
+.container {
+  margin: 0px auto;  
+  display: flex;
+  justify-content: space-evenly;
+}
+.header {
+  height: 60px;
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  a {
+    color: whitesmoke;
+    font-size: 18;
+    text-decoration: none;
+  }
+  &__logo {
+  }
+  &__navbar {
+    display: flex;
+  }
+  &__menu {
+    list-style-type: none;
+    margin-right: 10px;
+  }
+}
 .card {
-  padding: 0 5em;
+  width: 300px;
+  // padding: 0 5em;
   &__img {
     display: block;
     height: 140px;
@@ -54,3 +85,4 @@ body {
     }
   }
 }
+@import 'utilities';
